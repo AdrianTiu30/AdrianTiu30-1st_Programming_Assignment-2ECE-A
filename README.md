@@ -67,10 +67,8 @@ print("emotified sentence:", emoticon_map(sentence))
 
 ## Result:
 ```
-Input: 1, 2, 3, 4, 5, 6
-Output: First: 1
-        Middle: {2, 3, 4, 5}
-        Last: 6
+Input: Programming makes me sad
+Output: Programming makes me :(
 ```
 
 ## 3. Unpacking List Problem
@@ -84,3 +82,27 @@ Output: First: 1
 2. The inputted list will be unpacked and arranged into three parts (First, Middle, and Last).
 3. The comma is replaced with spacings.
 4. The arranged list is printed in order.
+
+## Code Snippet:
+```
+def unpack_list(lst):
+    first, *middle, last = lst
+    return first, middle, last
+
+user_input = input("Create a list: ")
+lst = [int(x) for x in user_input.replace(',', ' ').split()]
+
+first, middle, last = unpack_list(lst)
+
+print("First:", first)
+print("Middle:", middle)
+print("Last:", last)
+```
+
+## Result
+```
+Input: 1, 2, 3, 4, 5, 6
+Output: First: 1
+        Middle: [2, 3, 4, 5]
+        Last: 6
+```
