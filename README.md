@@ -18,20 +18,20 @@ This repository presents the explanation of my submitted code for
 4. The sorted word is printed below the original.
 
 ## Code Snippet:
-'''
+```
 def alphabet(word):
     return ''.join(sorted(word))
 
 word = input("Enter a word: ")
 print("Your word:", word)
 print("Sorted:", alphabet(word))
-'''
+```
 
 ## Result:
-'''
+```
 Input: banana
 Output: aaabnn
-'''
+```
 
 ## 2. Emoticon Problem
 **Goal:** Replace words ("smile", "sad", "mad", and "grin") with their corresponding emoticons and then print the emotified sentence.
