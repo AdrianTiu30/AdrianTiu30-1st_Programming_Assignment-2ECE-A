@@ -46,6 +46,32 @@ Output: aaabnn
 4. The original sentence is printed.
 5. The emotified sentence is printed right after the original sentence.
 
+## Code Snippet:
+```
+def emoticon_map(sentence):
+    emoticons = {
+    "smile": ":)",
+    "sad": ":(",
+    "mad": ">:(",
+    "grin": ":D"
+    }
+
+    words = sentence.split()
+    result = [emoticons.get(word.lower(), word) for word in words]
+    return " ".join(result)
+
+sentence = input("Write a sentence with (smile, sad, mad, grin): ")
+print("Your sentence:", sentence)
+print("emotified sentence:", emoticon_map(sentence))
+```
+
+## Result:
+```
+Input: 1, 2, 3, 4, 5, 6
+Output: First: 1
+        Middle: {2, 3, 4, 5}
+        Last: 6
+```
 
 ## 3. Unpacking List Problem
 **Goal:** Unpack the list and arrange it into order (First, Middle, and Last)
